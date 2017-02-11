@@ -1,7 +1,7 @@
 /*
-DC Voltmeter 
+Arduino UPC
 An Arduino DVM based on voltage divider concept
-T.K.Hareendran
+T.K.Hareendran & Andrej Sisila
 */
 
 #include <LiquidCrystal.h>
@@ -24,8 +24,6 @@ float vout = 0.0;
 float vin = 0.0;
 float vinMin = 0.0;
 float vinMax = 0.0;
-
-//float R1 = 100000.0; // resistance of R1 (100K) -see text!
 
 float R1 = 20000.0; // resistance of R1 (20K) - presnejsie
 float R2 = 10000.0; // resistance of R2 (10K) - see text!
