@@ -18,7 +18,7 @@ byte backlight_level = 10;
 
 LiquidCrystal lcd( pin_RS,  pin_EN,  pin_d4,  pin_d5,  pin_d6,  pin_d7);
 
-byte analogInput = 1;
+byte analogInput = 1;   // pin for voltage measuring
 float vout = 0.0;
 
 float vin = 0.0;
@@ -28,6 +28,8 @@ float vinMax = 0.0;
 float R1 = 20000.0; // resistance of R1 (20K) - presnejsie
 float R2 = 10000.0; // resistance of R2 (10K) - see text!
 int value = 0;
+
+int buzzer = 3;
 
 void setup(){
   pinMode(analogInput, INPUT);
@@ -56,6 +58,23 @@ void loop(){
   // zmen hranicne hodnoty
   if(vin > vinMax) vinMax = vin;
   if(vin < vinMin) vinMin = vin;
+
+  if(vin >= 12.6) {
+    tone(buzzer, 1000); // Send 1KHz sound signal...
+    delay(1000);        // ...for 1 sec
+    noTone(buzzer);     // Stop sound...
+    delay(1000);
+  } else if(vin <= 11.4) {
+    tone(buzzer, 1000); // Send 1KHz sound signal...
+    delay(500);        // ...for 1 sec
+    noTone(buzzer);     // Stop sound...
+    delay(500);
+    
+    tone(buzzer, 1000); // Send 1KHz sound signal...
+    delay(500);        // ...for 1 sec
+    noTone(buzzer);     // Stop sound...
+    delay(4000);
+  }
   
   Serial.print(vin);
   Serial.print('\t');
