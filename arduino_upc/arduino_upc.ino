@@ -43,6 +43,8 @@ void setup(){
   
   // inicializuj minimalne vstupne napatie
   vinMin = analogRead(analogInput);
+
+  // TODO - odpoj tranzistor na primarne napajanie
 }
 
 void loop(){
@@ -59,12 +61,15 @@ void loop(){
   if(vin > vinMax) vinMax = vin;
   if(vin < vinMin) vinMin = vin;
 
-  if(vin >= 12.6) {
+  // check ATX2.2 12V rail tolerance +-5%: 11.4 - 12.6V
+  if(vin > 12.9) {  // the picoPSU 120 limit of overvoltage protection is 13-13.5V - setting it to 12.9
     tone(buzzer, 1000); // Send 1KHz sound signal...
-    delay(1000);        // ...for 1 sec
+    delay(2000);        // ...for 1 sec
     noTone(buzzer);     // Stop sound...
-    delay(1000);
-  } else if(vin <= 11.4) {
+    delay(2000);
+
+    // TODO - odpoj tranzistor na primarne napajanie
+  } else if(vin < 11.4) {
     tone(buzzer, 1000); // Send 1KHz sound signal...
     delay(500);        // ...for 1 sec
     noTone(buzzer);     // Stop sound...
@@ -74,6 +79,26 @@ void loop(){
     delay(500);        // ...for 1 sec
     noTone(buzzer);     // Stop sound...
     delay(4000);
+  } else {
+//    tone(buzzer, 2000); // Send 1KHz sound signal...
+//    delay(250);        // ...for 1 sec
+//    noTone(buzzer);     // Stop sound...
+//    delay(250);
+//
+//    tone(buzzer, 2000); // Send 1KHz sound signal...
+//    delay(250);        // ...for 1 sec
+//    noTone(buzzer);     // Stop sound...
+//    delay(250);
+//
+//    tone(buzzer, 2000); // Send 1KHz sound signal...
+//    delay(250);        // ...for 1 sec
+//    noTone(buzzer);     // Stop sound...
+//    delay(250);
+//
+//    tone(buzzer, 2000); // Send 1KHz sound signal...
+//    delay(250);        // ...for 1 sec
+//    noTone(buzzer);     // Stop sound...
+//    delay(250);
   }
   
   Serial.print(vin);
