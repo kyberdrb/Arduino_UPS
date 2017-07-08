@@ -1,5 +1,5 @@
 /*
-  Arduino UPC
+  Arduino UPS
   An Arduino DVM based on voltage divider concept
   T.K.Hareendran && Andrej Sisila
 */
