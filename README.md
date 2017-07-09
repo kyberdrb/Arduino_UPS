@@ -73,11 +73,11 @@ You don't have to do the math by hand. Instead, use [a calculator for voltage di
 ![Picture of a voltage divider](http://www.ohmslawcalculator.com/static/img/voltage-divider-calculator-2.png)
 
 #### Buzzer
-A N-channel MOSFET was needed to drive a buzzer, which was rated for 12V.
+A N-channel MOSFET was needed to drive a buzzer (piezo speaker), which was rated for 12V. Pin #3 on Arduino was outputting PWM signal to the MOSFET's gate. The frequency of the PWM signal was transfered to the speaker, which then produced tone at that frequency.
 
-<TODO picture>
+![Buzzer scheme](https://raw.githubusercontent.com/kyberdrb/Arduino_UPS/master/hw_doc/Buzzer_bb.png)
 
-The physical scheme ([Arduino_UPS.fzz](https://github.com/kyberdrb/Arduino_UPS/raw/master/hw_doc/Arduino_UPS.fzz)) has been made with the help of **_Fritzing_**.
+The physical scheme ([Arduino_UPS.fzz](https://github.com/kyberdrb/Arduino_UPS/raw/master/hw_doc/Arduino_UPS.fzz) and [Buzzer.fzz](https://github.com/kyberdrb/Arduino_UPS/raw/master/hw_doc/Buzzer.fzz)) has been made with the help of **_Fritzing_**.
 
 # Software documentation
 ## Voltage measuring
