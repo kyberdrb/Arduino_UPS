@@ -18,7 +18,7 @@ Every aspect of this project is thoroughly explained in this documentation.
 * Breadboard (using a smaller one)
 * Wires
 * Transistor (N MOSFET)
-* Rezistors: 20k, 10k, 2.2k
+* Resistors: 20k, 10k, 2.2k
 * Buzzer
 * Power panel connectors
 * Polymer fuses: one >=13V >=7A (main power), one >=13V >=1A (buzzer fuse :) )
@@ -70,14 +70,14 @@ Vin = 15V  => 15V is the maximum input volate to the voltage divider.
 
 You don't have to do the math by hand. Instead, use [a calculator for voltage divider](http://www.ohmslawcalculator.com/voltage-divider-calculator) to do the job for you. You can customize there everything you need.
 
-![Picture of a voltage divider](http://www.ohmslawcalculator.com/static/img/voltage-divider-calculator-2.png)
+![Voltage divider scheme](https://github.com/kyberdrb/Arduino_UPS/raw/master/hw_doc/Voltage_divider_bb.png)
 
 #### Buzzer
-A N-channel MOSFET was needed to drive a buzzer (piezo speaker), which was rated for 12V. Pin #3 on Arduino was outputting PWM signal to the MOSFET's gate. The frequency of the PWM signal was transfered to the speaker, which then produced tone at that frequency.
+A N-channel MOSFET was needed to drive a buzzer (piezo speaker), which was rated for 12V. Pin #3 on Arduino was outputting PWM signal to the MOSFET's gate through the 2.2k resistor. The frequency of the PWM signal was transfered to the speaker, which then produced tone at that frequency.
 
 ![Buzzer scheme](https://raw.githubusercontent.com/kyberdrb/Arduino_UPS/master/hw_doc/Buzzer_bb.png)
 
-The physical scheme ([Arduino_UPS.fzz](https://github.com/kyberdrb/Arduino_UPS/raw/master/hw_doc/Arduino_UPS.fzz) and [Buzzer.fzz](https://github.com/kyberdrb/Arduino_UPS/raw/master/hw_doc/Buzzer.fzz)) has been made with the help of **_Fritzing_**.
+The physical scheme ([Arduino_UPS.fzz](https://github.com/kyberdrb/Arduino_UPS/raw/master/hw_doc/Arduino_UPS.fzz), [Buzzer.fzz](https://github.com/kyberdrb/Arduino_UPS/raw/master/hw_doc/Buzzer.fzz) and [Voltage_divider.fzz](https://github.com/kyberdrb/Arduino_UPS/raw/master/hw_doc/Voltage_divider.fzz)) has been made with the help of **_Fritzing_**.
 
 # Software documentation
 ## Voltage measuring
