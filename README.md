@@ -20,6 +20,7 @@ Every aspect of this project is thoroughly explained in this documentation.
 * Rezistors: 20k, 10k, 2.2k
 * Buzzer
 * Power panel connectors
+* Polymer fuses: one >=13V >=7A (main power), one >=13V >=1A (buzzer fuse :) )
 
 ## Tools
 * Drill
@@ -28,7 +29,7 @@ Every aspect of this project is thoroughly explained in this documentation.
 ## Schemes
 ### Physical (breadboard) scheme
 
-![Physical scheme](https://raw.githubusercontent.com/kyberdrb/Arduino_UPS/master/hw_doc/Arduino_UPS_physical_scheme.png)
+![Physical scheme](https://raw.githubusercontent.com/kyberdrb/Arduino_UPS/master/hw_doc/Arduino_UPS_bb.png)
 
 TODO deep explanation of my scheme
 
