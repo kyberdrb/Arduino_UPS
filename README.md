@@ -4,7 +4,7 @@ An UPS (Uninterruptible Power Supply) made of my old (broken) UPS and Arduino.
 # Documentation
 The documentation consists of hardware and software part.  
 The hardware documentation consists of an electrical scheme and used parts. It resides in "hw_doc" directory.  
-The software documentation consists of an action diagram of the Arduino program.It resides in "sw_doc" directory.  
+The software documentation consists of an action diagram of the Arduino program. It resides in "sw_doc" directory.  
 Source code is included as well and can be found in "arduino_ups" directory.  
 Every aspect of this project is thoroughly explained in this documentation.
 
@@ -28,7 +28,7 @@ Every aspect of this project is thoroughly explained in this documentation.
 * Screwdriver
 
 ## Schemes
-### Physical (breadboard) scheme
+### Physical scheme
 
 ![Physical scheme](https://raw.githubusercontent.com/kyberdrb/Arduino_UPS/master/hw_doc/Arduino_UPS_bb.png)
 
@@ -38,13 +38,39 @@ goes to the bread board and Arduino Uno power jack. The LCD Keypad Shield is dir
 board. The LCD Keypad Shield is used for user interaction.
 
 #### Voltage measuring
-For voltage measuring I used voltage divider, which uses Ohm's law.
+For voltage measuring I used voltage divider, which uses Ohm's law. R1 resistor is 20k, R2 is 10k
 
 The calculation and the picture of the scheme for voltage measuring is shown below.
 
-<TODO calculation>
+##### Calculation
+We need to calculate, what the maximum input voltage from the power source can be, before the Arduino blows on fire :)
+The closer it is to the nominal voltage of the power brick (in this case 12V), the more accurate voltage readings we will get,
+but the less headroom we will have, when the voltage starts fluctuating (which is rather unlikly but possible).
 
-<TODO picture>
+Vout = ouput voltage (to the Arduino input pin)
+Vin = input voltage (from the power source)
+R1, R2 = resistance values of R1 and R2
+
+Vout can be at most 5V beacuse we can provide to the Arduino input pins AT MOST 5V! Otherwise we will fry the Arduino.
+
+Equations...
+
+Vout = (Vin * R2) / (R1 + R2)  
+Vout * (R1 + R2) = Vin * R2  
+(Vout * (R1 + R2)) / R2 = Vin  
+
+Now we can replace the variables with the values.  
+Vout = 5V  
+R1 = 20k = 20000  
+R2 = 10k = 10000  
+
+(Vout * (R1 + R2)) / R2 = Vin  
+(5 * (20000 + 10000)) / 10000 = Vin  
+Vin = 15V  => 15V is the maximum input volate to the voltage divider.
+
+You don't have to do the math by hand. Instead, use [a calculator for voltage divider](http://www.ohmslawcalculator.com/voltage-divider-calculator) to do the job for you. You can customize there everything you need.
+
+![Picture of a voltage divider](http://www.ohmslawcalculator.com/static/img/voltage-divider-calculator-2.png)
 
 #### Buzzer
 A N-channel MOSFET was needed to drive a buzzer, which was rated for 12V.
