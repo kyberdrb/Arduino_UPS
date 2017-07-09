@@ -12,6 +12,7 @@ Every aspect of this project is thoroughly explained in this documentation.
 ## Parts
 * Old UPS (or a box to put everything in)
 * 12V 7Ah battery
+* 12V power brick
 * Arduino Uno
 * LCD Keypad Shield
 * Breadboard (using a smaller one)
@@ -31,11 +32,34 @@ Every aspect of this project is thoroughly explained in this documentation.
 
 ![Physical scheme](https://raw.githubusercontent.com/kyberdrb/Arduino_UPS/master/hw_doc/Arduino_UPS_bb.png)
 
-TODO deep explanation of my scheme
+#### Power circuit
+The power from the power brick goes into "Input 12V DC" jack. Then it leads to the polymer fuse. From there it
+goes to the bread board and Arduino Uno power jack. The LCD Keypad Shield is directly connected to the Arduino
+board. The LCD Keypad Shield is used for user interaction.
+
+#### Voltage measuring
+For voltage measuring I used voltage divider, which uses Ohm's law.
+
+The calculation and the picture of the scheme for voltage measuring is shown below.
+
+<TODO calculation>
+
+<TODO picture>
+
+#### Buzzer
+A N-channel MOSFET was needed to drive a buzzer, which was rated for 12V.
+
+<TODO picture>
 
 The physical scheme ([Arduino_UPS.fzz](https://github.com/kyberdrb/Arduino_UPS/raw/master/hw_doc/Arduino_UPS.fzz)) has been made with the help of **_Fritzing_**.
 
 # Software documentation
+## Voltage measuring
+Description of voltage measuring code.
+
+## Buzzer
+Description of buzzer code.
+
 ## Activity diagram
 
 ![Activity diagram](https://github.com/kyberdrb/Arduino_UPS/raw/master/sw_doc/Arduino_UPS_activity_diagram.png)
