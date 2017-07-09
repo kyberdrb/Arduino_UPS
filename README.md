@@ -32,7 +32,7 @@ Every aspect of this project is thoroughly explained in this documentation.
 
 TODO deep explanation of my scheme
 
-The physical scheme (["Arduino_UPS.fzz"](https://github.com/kyberdrb/Arduino_UPS/raw/master/hw_doc/Arduino_UPS.fzz)) has been made with the help of **_Fritzing_**.
+The physical scheme ([Arduino_UPS.fzz](https://github.com/kyberdrb/Arduino_UPS/raw/master/hw_doc/Arduino_UPS.fzz)) has been made with the help of **_Fritzing_**.
 
 # Software documentation
 ## Activity diagram
@@ -47,7 +47,7 @@ The source code is in the file [arduino_ups.ino](https://github.com/kyberdrb/Ard
 
 
 
-#Sources
+# Sources
 How to Use a Buzzer (or Piezo Speaker) - Arduino Tutorial  
   http://www.instructables.com/id/How-to-use-a-Buzzer-Arduino-Tutorial/?ALLSTEPS
 
