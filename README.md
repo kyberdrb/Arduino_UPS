@@ -87,7 +87,7 @@ TODO Description of voltage measuring code.
 TODO Description of buzzer code + State chart.
 
 ## User interaction
-I was considering to split this part on hardware and software part, but instea I decided to put everything about user interaction in one place.
+I was considering to split this part on hardware and software part, but instead I decided to put everything about user interaction in one place.
 
 TODO LCD and button mappings
 
