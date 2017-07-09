@@ -3,8 +3,9 @@ An UPS (Uninterruptible Power Supply) made of my old (broken) UPS and Arduino.
 
 # Documentation
 The documentation consists of hardware and software part.  
-The hardware documentation consists of an electrical scheme and used parts.  
-The software documentation consists of an action diagram of the Arduino program. Source code is included as well.  
+The hardware documentation consists of an electrical scheme and used parts. It resides in "hw_doc" directory.  
+The software documentation consists of an action diagram of the Arduino program.It resides in "sw_doc" directory.  
+Source code is included as well and can be found in "arduino_ups" directory.  
 Every aspect of this project is thoroughly explained in this documentation.
 
 # Hardware documentation
