@@ -28,16 +28,18 @@ Every aspect of this project is thoroughly explained in this documentation.
 ## Schemes
 ### Physical (breadboard) scheme
 
-![Physical scheme](https://github.com/kyberdrb/Arduino_UPS/blob/master/hw_doc/Arduino_UPS_physical_scheme.png)
+![Physical scheme](https://raw.githubusercontent.com/kyberdrb/Arduino_UPS/master/hw_doc/Arduino_UPS_physical_scheme.png)
 
 TODO deep explanation of my scheme
 
-The physical scheme (["Arduino_UPS.fzz"](https://github.com/kyberdrb/Arduino_UPS/blob/master/hw_doc/Arduino_UPS.fzz)) has been made with the help of **_Fritzing_**.
+The physical scheme (["Arduino_UPS.fzz"](https://github.com/kyberdrb/Arduino_UPS/raw/master/hw_doc/Arduino_UPS.fzz)) has been made with the help of **_Fritzing_**.
 
 # Software documentation
 ## Activity diagram
 
-![Activity diagram](https://github.com/kyberdrb/Arduino_UPS/blob/master/sw_doc/Arduino_UPS_activity_diagram.png)
+![Activity diagram](https://github.com/kyberdrb/Arduino_UPS/raw/master/sw_doc/Arduino_UPS_activity_diagram.png)
+
+The activity diagram has been made with the use of [draw.io](https://www.draw.io/).
 
 TODO High-level explanation of my code
 
@@ -53,7 +55,7 @@ Piezzo Speaker - DBX12
   http://www.db.com.hk/dbtronix/site/products_detail.php?pID=152
 
 IRFZ 24N :: Power MOSFET N-channel TO-220AB 55 V 17 A  
-  https://www.reichelt.de/Transistors-IRFU-IRFZ-/IRFZ-24N/3/index.html? ACTION=3&GROUPID=2894&ARTICLE=41737&OFFSET=16&SID=12VLelR38AAAIAABdkn9cb2bfeae5b6b044ddd7148786155b03ea&LANGUAGE=EN
+  https://www.reichelt.de/Transistors-IRFU-IRFZ-/IRFZ-24N/3/index.html?ACTION=3&GROUPID=2894&ARTICLE=41737&OFFSET=16&SID=12VLelR38AAAIAABdkn9cb2bfeae5b6b044ddd7148786155b03ea&LANGUAGE=EN
 
 IRFZ24NPBF - Documentation for the tranzistor (the closest i could find)  
   http://cdn-reichelt.de/documents/datenblatt/A100/IRFZ24N_IR.pdf
