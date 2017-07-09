@@ -28,7 +28,7 @@ Every aspect of this project is thoroughly explained in this documentation.
 ## Schemes
 ### Physical (breadboard) scheme
 
-![Physical scheme](https://github.com/kyberdrb/Arduino_UPS/hw_doc/blob/master/Arduino_UPS_physical_scheme.png)
+![Physical scheme](Arduino_UPS/hw_doc/Arduino_UPS_physical_scheme.png)
 
 TODO deep explanation of my scheme
 
