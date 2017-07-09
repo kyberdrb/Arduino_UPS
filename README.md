@@ -3,8 +3,9 @@ An UPS (Uninterruptible Power Supply) made of my old (broken) UPS and Arduino.
 
 # Documentation
 The documentation consists of hardware and software part.  
-In the hardware documentation consists an electrical scheme and used parts.  
-In the software documentation is an action diagram of the Arduino program. Source code is included as well.  
+The hardware documentation consists of an electrical scheme and used parts.  
+The software documentation consists of an action diagram of the Arduino program. Source code is included as well.  
+Every aspect of this project is thoroughly explained in this documentation.
 
 # Hardware documentation
 ## Parts
@@ -12,12 +13,12 @@ In the software documentation is an action diagram of the Arduino program. Sourc
 * 12V 7Ah battery
 * Arduino Uno
 * LCD Keypad Shield
-* Breadboard
+* Breadboard (using a smaller one)
 * Wires
-* Transistor
+* Transistor (N MOSFET)
+* Rezistors: 20k, 10k, 2.2k
 * Buzzer
-* USB panel connector
-* Power panel connector
+* Power panel connectors
 
 ## Tools
 * Drill
@@ -26,14 +27,18 @@ In the software documentation is an action diagram of the Arduino program. Sourc
 ## Schemes
 ### Physical (breadboard) scheme
 
-<image_of_physical_scheme>
+![Physical scheme](https://github.com/kyberdrb/Arduino_UPS/hw_doc/blob/master/Arduino_UPS_physical_scheme.png)
 
-The physical scheme ("Arduino_UPS.fzz") has been made with the help of _Fritzing_.
+TODO deep explanation of my scheme
+
+The physical scheme ("Arduino_UPS.fzz") has been made with the help of **_Fritzing_**.
 
 # Software documentation
-## Action diagram
+## Activity diagram
 
-<image_of_action_diagram>
+![Activity diagram](https://github.com/kyberdrb/Arduino_UPS/sw_doc/blob/master/Arduino_UPS_activity_diagram.png)
+
+TODO High-level explanation of my code
 
 The source code can be found in "arduino_upc" directory.
 
