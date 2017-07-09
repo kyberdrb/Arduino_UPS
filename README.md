@@ -66,7 +66,7 @@ R2 = 10k = 10000
 
 (Vout * (R1 + R2)) / R2 = Vin  
 (5 * (20000 + 10000)) / 10000 = Vin  
-Vin = 15V  => 15V is the maximum input volate to the voltage divider.
+Vin = 15V  => 15V can be the maximum input volate to the voltage divider from the power brick.
 
 You don't have to do the math by hand. Instead, use [a calculator for voltage divider](http://www.ohmslawcalculator.com/voltage-divider-calculator) to do the job for you. You can customize there everything you need.
 
@@ -81,18 +81,26 @@ The physical scheme ([Arduino_UPS.fzz](https://github.com/kyberdrb/Arduino_UPS/r
 
 # Software documentation
 ## Voltage measuring
-Description of voltage measuring code.
+TODO Description of voltage measuring code.
 
 ## Buzzer
-Description of buzzer code.
+TODO Description of buzzer code + State chart.
+
+## User interaction
+I was considering to split this part on hardware and software part, but instea I decided to put everything about user interaction in one place.
+
+TODO LCD and button mappings
 
 ## Activity diagram
+
+TODO Activity diagram description and picture
 
 ![Activity diagram](https://github.com/kyberdrb/Arduino_UPS/raw/master/sw_doc/Arduino_UPS_activity_diagram.png)
 
 The activity diagram has been made with the use of [draw.io](https://www.draw.io/).
 
 TODO High-level explanation of my code
+TODO traslate the entire arduino source code into english
 
 The source code is in the file [arduino_ups.ino](https://github.com/kyberdrb/Arduino_UPS/blob/master/arduino_ups/arduino_upc.ino) and can be found in "[arduino_upc](https://github.com/kyberdrb/Arduino_UPS/tree/master/arduino_ups)" directory.
 
