@@ -81,10 +81,19 @@ The physical scheme ([Arduino_UPS.fzz](https://github.com/kyberdrb/Arduino_UPS/r
 
 # Software documentation
 ## Voltage measuring
-TODO Description of voltage measuring code.
+
+Using the computation mentioned in the hardware documentation, the maximum voltage that we can measure is 15 Volts. However the Arduino analog input pins can handle only 5 Volts which is why we put a voltage divider in between the battery and Arduino. The voltage that the voltage divider ouputs to the Arduino is less than 5V. In the program, the voltage is reversly transformed into the original voltage of the battery. The calculated voltage of the battery is then send to the LCD Keypad Shield to be outputted on the display.
 
 ## Buzzer
-TODO Description of buzzer code + State chart.
+
+The buzzer provides an acoustic feedback about the voltage level of the battery. If it's too high or low (according to measuring and ATX2.2 standard), the buzzer starts beeping (different sounds for too low and too high levels). When everything is all right, the buzzer is silent. Below we can see the activity diagram (state chart) for the buzzer. The buzzer can exist in three (transition) states:  
+State 1 - "Not beeping -> Beeping"  - starts beeping
+State 2 - "Beeping -> Beeping"      - continues beeping certain amount of time
+State 2 - "Beeping -> Not beeping"  - after the beeping time is over, the buzzer is silent 
+                                      for certain amount of time. After this time is due, 
+									  the buzzer can start beeping again.
+
+![Activity diagram](https://github.com/kyberdrb/Arduino_UPS/raw/master/sw_doc/Arduino_UPS_activity_diagram_buzzer.png)
 
 ## User interaction
 I was considering to split this part on hardware and software part, but instead I decided to put everything about user interaction in one place.
