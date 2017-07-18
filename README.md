@@ -87,11 +87,11 @@ Using the computation mentioned in the hardware documentation, the maximum volta
 ## Buzzer
 
 The buzzer provides an acoustic feedback about the voltage level of the battery. If it's too high or low (according to measuring and ATX2.2 standard), the buzzer starts beeping (different sounds for too low and too high levels). When everything is all right, the buzzer is silent. Below we can see the activity diagram (state chart) for the buzzer. The buzzer can exist in three (transition) states:  
-State 1 - "Not beeping -> Beeping"  - starts beeping
-State 2 - "Beeping -> Beeping"      - continues beeping certain amount of time
-State 2 - "Beeping -> Not beeping"  - after the beeping time is over, the buzzer is silent 
-                                      for certain amount of time. After this time is due, 
-									  the buzzer can start beeping again.
+State 1 - "Not beeping -> Beeping"  - starts beeping  
+State 2 - "Beeping -> Beeping"      - continues beeping certain amount of time  
+State 2 - "Beeping -> Not beeping"  - after the beeping time is over, the buzzer is silent  
+                                      for certain amount of time. After this time is due,  
+									  the buzzer can start beeping again.  
 
 ![Activity diagram](https://github.com/kyberdrb/Arduino_UPS/raw/master/sw_doc/Arduino_UPS_activity_diagram_buzzer.png)
 
