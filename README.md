@@ -86,19 +86,30 @@ Using the computation mentioned in the hardware documentation, the maximum volta
 
 ## Buzzer
 
-The buzzer provides an acoustic feedback about the voltage level of the battery. If it's too high or low (according to measuring and ATX2.2 standard), the buzzer starts beeping (different sounds for too low and too high levels). When everything is all right, the buzzer is silent. Below we can see the activity diagram (state chart) for the buzzer. The buzzer can exist in three (transition) states:  
-State 1 - "Not beeping -> Beeping"  - starts beeping  
-State 2 - "Beeping -> Beeping"      - continues beeping certain amount of time  
-State 2 - "Beeping -> Not beeping"  - after the beeping time is over, the buzzer is silent  
-                                      for certain amount of time. After this time is due,  
-									  the buzzer can start beeping again.  
+The buzzer provides an acoustic feedback about the voltage level of the battery. If it's too high or low (according to measuring and ATX2.2 standard), the buzzer starts beeping (different sounds for too low and too high levels). When everything is all right, the buzzer is silent. Below we can see the activity diagram (state chart) for the buzzer. The buzzer can exist in three (transition) states:
+\\
+State 1 - "Not beeping -> Start beeping"       - starts beeping  
+State 2 - "Started beeping -> Keep beeping"    - continues beeping certain amount of time  
+State 3 - "Enough beeping -> Stop beeping"     - after the beeping time is over, the buzzer is silent  
+                                                 for certain amount of time. After this time is due,  
+						 the buzzer can start beeping again.  
 
 ![Activity diagram](https://github.com/kyberdrb/Arduino_UPS/raw/master/sw_doc/Arduino_UPS_activity_diagram_buzzer.png)
 
+This activity diagram produces one beep of certain length and then the buzzer becomes silent for a certain amount of time.
+
 ## User interaction
 I was considering to split this part on hardware and software part, but instead I decided to put everything about user interaction in one place.
+\\
+Button 1 - DEBUG - Voltage up  
+Button 2 - Mute/Unmute the buzzer  
+Button 3 - Brightness up  
+Button 4 - BBrightness down  
+Button 5 - DEBUG - Voltage down  
+Button 6 - Reset (can't be changed, it's hardwired to Arduino)  
+\\
 
-TODO LCD and button mappings
+TOTO - button image
 
 ## Activity diagram
 
@@ -108,10 +119,12 @@ TODO Activity diagram description and picture
 
 The activity diagram has been made with the use of [draw.io](https://www.draw.io/).
 
-TODO High-level explanation of my code
+TODO High-level overview of my code
 TODO traslate the entire arduino source code into english
 
-The source code is in the file [arduino_ups.ino](https://github.com/kyberdrb/Arduino_UPS/blob/master/arduino_ups/arduino_upc.ino) and can be found in "[arduino_upc](https://github.com/kyberdrb/Arduino_UPS/tree/master/arduino_ups)" directory.
+The source code is in the file 
+[arduino_ups.ino](https://github.com/kyberdrb/Arduino_UPS/blob/master/arduino_ups/arduino_upc.ino) and can be found in 
+directory "[arduino_upc](https://github.com/kyberdrb/Arduino_UPS/tree/master/arduino_ups)".
 
 
 

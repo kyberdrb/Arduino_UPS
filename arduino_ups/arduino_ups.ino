@@ -1,6 +1,6 @@
 /*
   Arduino UPS
-  An Arduino DVM based on voltage divider concept
+  An Arduino DVM (Digital Volt Meter) based on voltage divider concept
   T.K.Hareendran && Andrej Sisila
 */
 
