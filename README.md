@@ -90,7 +90,7 @@ The buzzer provides an acoustic feedback about the voltage level of the battery.
 measuring and ATX2.2 standard), the buzzer starts beeping (different sounds for too low and too high levels). When everything 
 is all right, the buzzer is silent. Below we can see the activity diagram (state chart) for the buzzer. The buzzer can exist in three (transition) states:  
 
-|&nbsp;State| Description | Explanation
+|&nbsp;&nbsp;&nbsp;&nbsp;State| Description | Explanation
 |---------|---------------------------------|-----------------------------------------------------------|
 |&nbsp;State 1   | Not beeping -> Start beeping    | Starts beeping                                         
 |&nbsp;State 2   | Started beeping -> Keep beeping | Continues beeping certain amount of time                                        
