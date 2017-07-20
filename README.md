@@ -103,8 +103,11 @@ Table created with the help of [tablesgenerator.com](http://www.tablesgenerator.
 This activity diagram produces one beep of certain length and then the buzzer becomes silent for a certain amount of time.
 
 ## User interaction
-I was considering to split this part on hardware and software part, but instead I decided to put everything about user 
-interaction in one place.  
+I was considering to split the user interaction on hardware and software part, but instead I decided to put everything about 
+it here.
+
+The user can interact with the UPS using the buttons. The function of each button is explained below. After pressing a button, 
+a responsible action is taken which is defined in function "execBtnAction".  
 
 The DEBUG buttons are inactive! Their function is to test the voltage limits. When the voltage limits are crossed, the user 
 gets feedback from the buzzer.
