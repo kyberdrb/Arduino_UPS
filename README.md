@@ -90,14 +90,15 @@ The buzzer provides an acoustic feedback about the voltage level of the battery.
 measuring and ATX2.2 standard), the buzzer starts beeping (different sounds for too low and too high levels). When everything 
 is all right, the buzzer is silent. Below we can see the activity diagram (state chart) for the buzzer. The buzzer can exist in three (transition) states:  
 
-| State   | Description                     | Explanation                                                                                                               
+|&nbsp;State&nbsp;&nbsp;&nbsp;&nbsp;| Description                     | Explanation                                                                                                               
 |
 |---------|---------------------------------|---------------------------------------------------------------------------------------------------------------------------|
-| State 1 | Not beeping -> Start beeping    | Starts beeping                                                                                                            
+|&nbsp;State 1&nbsp;| Not beeping -> Start beeping    | Starts beeping                                                                                                            
 |
-| State 2 | Started beeping -> Keep beeping | Continues beeping certain amount of time                                                                                  
+|&nbsp;State 2&nbsp;| Started beeping -> Keep beeping | Continues beeping certain amount of time                                                                                  
 |
-| State 3 | Enough beeping -> Stop beeping  | After the beeping time is over, the buzzer is silent for certain amount of time. 
+|&nbsp;State 3 | Enough beeping -> Stop beeping  | After the beeping time is over, the buzzer is silent for certain amount of 
+time. 
 Then the buzzer can start beeping again. |
 
 Table created with the help of [tablesgenerator.com](http://www.tablesgenerator.com/markdown_tables).
@@ -109,7 +110,7 @@ This activity diagram produces one beep of certain length and then the buzzer be
 ## User interaction
 I was considering to split this part on hardware and software part, but instead I decided to put everything about user 
 interaction in one place.  
-\\  
+------------------------------------------------    
 Button 1 - DEBUG - Voltage up  
 Button 2 - Mute/Unmute the buzzer  
 Button 3 - Brightness up  
