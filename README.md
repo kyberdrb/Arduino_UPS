@@ -104,8 +104,7 @@ This activity diagram produces one beep of certain length and then the buzzer be
 
 ## User interaction
 I was considering to split this part on hardware and software part, but instead I decided to put everything about user 
-interaction in one place.
-\\
+interaction in one place.  
 
 Button 1 - DEBUG - Voltage up  
 Button 2 - Mute/Unmute the buzzer  
