@@ -94,8 +94,7 @@ is all right, the buzzer is silent. Below we can see the activity diagram (state
 |---------|---------------------------------|-----------------------------------------------------------|
 |&nbsp;State 1   | Not beeping -> Start beeping    | Starts beeping                                         
 |&nbsp;State 2   | Started beeping -> Keep beeping | Continues beeping certain amount of time                                        
-|&nbsp;State 3   | Enough beeping -> Stop beeping  | After the beeping time is over, the buzzer is silent for certain amount 
-of time. Then the buzzer can start beeping again.
+|&nbsp;State 3   | Enough beeping -> Stop beeping  | After the beeping time is over, the buzzer is silent for certain amount of time. Then the buzzer can start beeping again.
 
 Table created with the help of [tablesgenerator.com](http://www.tablesgenerator.com/markdown_tables).
 
