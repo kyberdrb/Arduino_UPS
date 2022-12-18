@@ -11,7 +11,7 @@ Every aspect of this project is thoroughly explained in this documentation.
 # Hardware documentation
 ## Parts
 * Old UPS (or a box to put everything in)
-* 12V 7Ah battery
+* 12V 7Ah battery - `CJ12-7` accumulator has dimensions to fit exactly in the battery compartment
 * 12V power brick
 * Arduino Uno
 * LCD Keypad Shield
